@@ -1,0 +1,55 @@
+
+
+
+<div class="container">
+		
+		<div class="jumbotron">
+			<h1 class=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Good Burger </h1>
+			<hr>
+			<h2 class="">what burger do you want to eat, it could be anything!</h2>
+			
+			<br>
+
+			
+            <form action="/toindex" method="POST">
+              <div class="form-group">
+                <label for="burger">Burger Name</label>
+                <input type="text" class="form-control" id="burgerName" aria-describedby="burgername" placeholder="Enter Name">
+                <small id="nameHelp" class="form-text text-muted">We kinda need to know who you are</small>
+              </div>
+              
+              
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+		</div>
+
+	    
+
+	</div>
+
+	<div>
+
+{{#each burgerstack}}
+
+<button action="/eat" method ="GET" type="submit" class="btn btn-primary">{{burgerName}}</button>
+
+
+{{/each}}
+<div>
+
+
+<br>
+<br>
+
+<div>
+{{#each ateStack}}
+<button type="submit" class="btn btn-primary">{{burgerName}}</button>
+{{/each}}
+</div>
+
+<footer class="footer">
+	      <div class="container">
+		        <p><a href="/api/friends">API Friends List</a> 
+	      </div>
+	    </footer>
